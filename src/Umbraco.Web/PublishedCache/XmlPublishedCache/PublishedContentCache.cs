@@ -246,7 +246,7 @@ namespace Umbraco.Web.PublishedCache.XmlPublishedCache
 		{
 		    return xmlNode == null
                 ? null
-                : (new XmlPublishedContent(xmlNode, isPreviewing)).CreateModel();
+                : (new XmlPublishedContent(xmlNode, isPreviewing,true)).CreateModel();
 		}
 
         private static IEnumerable<IPublishedContent> ConvertToDocuments(XmlNodeList xmlNodes, bool isPreviewing)
