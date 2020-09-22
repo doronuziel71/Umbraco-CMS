@@ -45,7 +45,7 @@
                         <tbody>
                             <tr ng-repeat="domain in vm.domains">
                                 <td>
-                                    <label for="assignDomain_domain_name_{{$index}}" class="sr-only"><localize key="assignDomain_Domain">Domain</localize></label>
+                                    <label for="assignDomain_domain_name_{{$index}}" class="sr-only"><localize key="assignDomain_domain">Domain</localize>&nbsp;{{$index + 1}}</label>
                                     <input type="text" class="w-100" ng-model="domain.name" id="assignDomain_domain_name_{{$index}}" name="domain_name_{{$index}}" required umb-auto-focus />
 
                                     <span ng-if="vm.domainForm.$submitted" ng-messages="vm.domainForm['domain_name_' + $index].$error">
@@ -54,7 +54,7 @@
                                     <span ng-show="domain.duplicate" class="help-inline"><localize key="assignDomain_duplicateDomain"></localize><span ng-show="domain.other">({{domain.other}})</span></span>
                                 </td>
                                 <td>
-                                    <label for="assignDomain_domain_language_{{$index}}" class="sr-only"><localize key="assignDomain_Language">Language</localize></label>
+                                    <label for="assignDomain_domain_language_{{$index}}" class="sr-only"><localize key="assignDomain_language">Language</localize>&nbsp;{{$index + 1}}</label>
                                     <select name="domain_language_{{$index}}"
                                             id="assignDomain_domain_language_{{$index}}"
                                             class="language w-100"
